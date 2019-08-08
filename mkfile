@@ -1,5 +1,5 @@
 et  DESCRIPTION:
-# mk module for quality control of single-end FASTQ files
+# mk module for quality control of FASTQ files
 #
 # USAGE:
 # Single target execution: `mk <TARGET>` where TARGET is
