@@ -1,4 +1,4 @@
-# DESCRIPTION:
+et  DESCRIPTION:
 # mk module for quality control of single-end FASTQ files
 #
 # USAGE:
@@ -9,7 +9,10 @@
 #
 # AUTHOR: HRG
 #
-# run FastQC on the *.fastq.gz files in data
+# Load configuration file
+< config.mk
+
+# Run FastQC on the *.fastq.gz files in data
 #
 results/%_fastqc.zip:   data/%.fastq.gz
 	DIR="`dirname $target | sort -u`"
@@ -17,4 +20,27 @@ results/%_fastqc.zip:   data/%.fastq.gz
 	fastqc $prereq -o "$DIR" \
 		--adapters config/adapter_list.txt \
 		--limits config/limits.txt \
-		-contaminants config/contaminant_list.txt 
+		--contaminants config/contaminant_list.txt
+
+# Generate multiqc report
+# run as `mk mqc`
+#
+mqc:V:	results/
+	multiqc $prereq \
+		--filename "multiqc-$MULTIQC_REPORT_NAME" \
+		--outdir $prereq
+
+# Clean intermediate FastQC files
+# run as `mk clean`
+#
+clean:V:
+	find results/ \
+		-type f \
+		-name "*_fastqc.zip" \
+		-o -name "*_fastqc.html" \
+	| xargs rm -f
+	find results/ \
+		-type d \
+		-empty \
+		-delete
+
