@@ -34,15 +34,14 @@ until finished
 
 End with an example of getting some data out of the system or using it for a little demo
 
-[comment]: <> (This is a comment, it will not be included)
 
-%## Contributing
+[comment]: <> ## Contributing
 
-%Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+[comment]: <> Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
-%## Versioning
+[comment]: <> ## Versioning
 
-%We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+[comment]: We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
