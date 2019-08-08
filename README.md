@@ -2,9 +2,6 @@
 
 Run [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) on any number of [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format) files to obtain a quality report for each one.
 
-## Getting Started
-
-`git clone https://github.com/hreypar/fastq-quality-check.git`
 
 ### Prerequisites
 
@@ -18,18 +15,18 @@ Run [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) on any 
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+Clone the repository (you should be running a unix-based OS). 
 
-Say what the step will be
+`git clone https://github.com/hreypar/fastq-quality-check.git`
 
-```
-Give the example
-```
+Go into the directory and create a symbolic link called `data` of your FASTQ-containing directory. 
 
-And repeat
 
 ```
-until finished
+cd fastq-quality-check
+
+ln -s /your/fastq_files/directory/ data
+
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
@@ -37,7 +34,8 @@ End with an example of getting some data out of the system or using it for a lit
 
 [comment]: <> (## Versioning)
 
-[comment]: (We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).)
+[comment]: <> (We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).)
+
 
 ## Authors
 
