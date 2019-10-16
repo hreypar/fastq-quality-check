@@ -15,6 +15,7 @@ et  DESCRIPTION:
 # Run FastQC on the *.fastq.gz files in data
 #
 results/%_fastqc.zip:   data/%.fastq.gz
+	export NPROC=6
 	DIR="`dirname $target | sort -u`"
 	mkdir -p "$DIR"
 	fastqc $prereq -o "$DIR" \
